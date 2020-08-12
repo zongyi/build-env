@@ -2,6 +2,8 @@ FROM ubuntu
 
 WORKDIR /opt
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update && \
     apt-get -y install apt-transport-https ca-certificates && \
     apt-get update && \
