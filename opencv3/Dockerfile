@@ -14,6 +14,6 @@ RUN apt-get update && \
 RUN git clone https://github.com/microsoft/vcpkg && \
     ./vcpkg/bootstrap-vcpkg.sh
 
-RUN ./vcpkg/vcpkg install "opencv3[nonfree,contrib]"
+RUN ./vcpkg/vcpkg install "opencv3[nonfree,contrib]" && \
     rm -rf ./vcpkg/buildtrees
 
